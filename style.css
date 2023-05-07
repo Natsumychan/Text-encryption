@@ -1,0 +1,307 @@
+*{
+ margin:0;
+ padding:0;
+ box-sizing: inherit;
+ font-size: 62.5%;
+}
+
+:root{
+ --color-layout: #F3F5FC;;
+}
+
+html{
+ box-sizing: border-box;
+ font-family: 'Inter', sans-serif;
+}
+
+/* mobile first */
+body{
+ background-image: url(/src/4882066.jpg);
+ background-size: cover;
+}
+
+
+main{
+ margin: 24px auto;
+ background-color: var(--color-layout);
+ width: 375px;
+ padding-bottom: 10px;
+ height:auto;
+ border-radius: 2px;
+}
+
+.alura-logo{
+ margin: 24px 16px;
+}
+
+section{
+ display: inline;
+ margin: 0 auto;
+}
+
+.writing-area-container{
+ padding: 20px 0;
+ display:flex;
+ justify-content: center;
+}
+
+textarea{
+ margin: 0 auto;
+ border:none;
+ text-align: center;
+ resize: none;
+}
+
+.legend-container{
+ margin-bottom: 16px;
+ margin-left: 16px;
+ display: flex;
+}
+
+legend{
+ margin-left: 8px;
+ font-size: 1.2rem;
+ line-height: 150%;
+ color:#495057;
+}
+
+.buttons-container{
+  display: flex;
+  flex-direction: column;
+  width:100%;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+input{
+ display: block;
+ margin:0 auto;
+ margin-bottom: 24px ;
+ padding: 24px;
+ width:320px;
+ height:67px;
+ font-size: 1.6rem;
+ line-height: 19px;
+ border: 1px solid #0A3871;
+ border-radius: 24px;
+ box-sizing: border-box;
+ box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+ }
+
+.encrypt-button{
+ background-color: #0A3871;
+ color: white;
+ transition: background-color 200ms ease-in-out;
+}
+
+.encrypt-button:hover{
+  background-color: #164f94;
+}
+
+.decrypt-button{
+ color:#0A3871;
+ transition: background-color 200ms ease-in-out;
+}
+
+.decrypt-button:hover {
+  background-color: rgb(189, 187, 187);
+}
+
+.writing-area{
+ margin-bottom: 64px;
+ width: 343px;
+ background-color: var(--color-layout);
+ font-size: 3.2rem;
+ color: #0A3871;
+}
+
+.writing-area::placeholder{
+ font-size: 3.2rem;
+ color:#0A3871;
+}
+
+.encrypted-container{
+ display:flex;
+ flex-direction: column;
+ margin: 0 auto;
+ margin-bottom: 40px;
+ padding: 32px;
+ width: 325px;
+ height: auto;
+ background-color: white;
+ font-size: 1.4rem;
+ box-sizing: border-box;
+ border-radius: 32px;
+ box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+}
+
+.first-dialog-box{
+  animation: appear-slowly 3s ease;
+}
+
+@keyframes appear-slowly {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.kid-img{
+  display:none;
+}
+
+h2{
+ width: 263px;
+ height:58px;
+ text-align: center;
+ color: #343A40;
+ font-size: 2.4rem;
+ line-height: 120%;
+}
+
+p{
+ width: 263px;
+ height: 48px;
+ font-size: 1.6rem;
+ line-height: 150%;
+ text-align: center;
+ color:#495057;
+}
+
+.encrypted-message{
+ margin: 0 auto;
+ margin-bottom: 40px;
+ text-align:left;
+ width:100%;
+ height: auto;
+ font-size: 2.4rem;
+ line-height: 150%;
+ color:#495057;
+}
+
+button{
+ padding:24px;
+ width:279px;
+ height: 67px;
+ border: 1px solid #0A3871;
+ border-radius: 24px;
+ font-size: 1.6rem;
+ line-height: 19px;
+ color:#0A3871;
+ background-color: white;
+}
+
+.hidden{
+ display:none;
+}
+
+/* tablet size */
+@media (min-width: 768px){
+ main {
+   width: 688px;
+   padding-bottom: 10px;
+   height: auto;
+   border-radius: 8px;
+  }
+
+ .alura-logo {
+   margin: 74.97px 40px 30px 40px;
+  }
+
+  form{
+   width: 100%;
+  }
+
+  .writing-area{
+   display: block;
+   margin: 0 auto;
+   width: 95%;
+  }
+
+  .legend-container{
+   margin-left: 12px;
+  }
+
+  input{
+   display: inline-block;
+   width: 320px;
+   font-size: 1.6rem;
+  }
+
+  .writing-area, input, button :hover {
+   cursor: pointer;
+  }
+
+  .buttons-container{
+    flex-direction: row;
+  }
+
+  .decrypt-button {
+   margin-left: 24px;
+  }
+
+  .encrypted-container{
+   width: 624px;
+  }
+
+  h2{
+   width: 100%;
+   text-align: center;
+  }
+
+  p{
+   width: 100%;
+   text-align: center;
+  }
+
+ .encrypted-message{
+  margin-bottom: 0;
+ }
+
+  button {
+   width: 100%;
+  }
+}
+
+/* laptop size */
+@media (min-width: 1440px){
+ main{
+  display: flex;
+  width: 94%;
+ }
+
+ .alura-logo{
+  margin-top: 40px;
+  margin-left: 84px;
+  width: 31.09px;
+  height: 48px;
+ }
+
+ .writing-area-container{
+  margin-top:168px;
+  justify-content:space-between;
+ }
+
+ .writing-area{
+  height: 640px;
+ }
+
+ .encrypted-container{
+  justify-content: space-between;
+  margin-top: 40px;
+  width: 400px;
+  height: 944px; 
+ }
+
+ .kid-img {
+   display: block;
+ }
+
+ .first-dialog-box{
+  justify-content: center;
+ }
+ 
+}

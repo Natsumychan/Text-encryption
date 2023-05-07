@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Text-encryption</title>
+ <link rel="stylesheet" href="style.css">
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+</head>
+<body>
+ <main>
+  <img src="/src/mobile_icon.png" alt="alura-logo" class="alura-logo">
+  <section class="writing-area-container">
+   <form action="#">
+    <textarea name=""  cols="30" rows="8" placeholder="Insert text here!" class="writing-area" required></textarea>
+    <div class="legend-container">
+     <img src="/src/bi_exclamation-circle-fill.png" alt="alert sign">
+     <legend> Only lower letters, and without any stress</legend>
+    </div>
+   <div class="buttons-container">
+    <input type="button" value="Encrypt" class="encrypt-button">
+    <input type="button" value="Decrypt" class="decrypt-button">
+   </div>
+   </form>
+  </section>
+  <section class="encrypted-container first-dialog-box">
+   <img src="/src/Muñeco.png" alt="Kid looking a jewel with a magnifying glass" class="kid-img">
+   <h2>There is no message available</h2>
+   <p>Please insert the text you want to encrypt first</p>
+  </section>
+  <section class="encrypted-container hidden">
+   <textarea class="encrypted-message" cols="1" rows="22" >Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius cum minima dicta repellat nobis ut, omnis iure accusantium aliquid voluptate impedit enim fugit modi dignissimos exercitationem eveniet asperiores! Facere, atque?
+   </textarea>
+   <button>Copy</button>
+  </section>
+ </main>
+</body>
+</html>
