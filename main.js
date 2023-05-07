@@ -6,7 +6,7 @@ const notMessageYet= document.querySelector(".first-dialog-box")
 const encryptedArea= document.querySelector("#encrypted-area")
 const copyButton= document.querySelector("#copy-button")
 let codeKeys=[["e","enter"],["i","imes"],["a","ai"],["o","ober"],["u","ufat"]]
-let regex = /^[a-z]+$/;
+let regex = /^[a-z\s]*$/;
 
 
 encryptButton.addEventListener("click",encryptOption)
@@ -26,8 +26,8 @@ function encryptOption (){
 
 function changeBoxResult(encryptedMessage){
  if(encryptedArea.classList.contains("hidden")){
-  notMessageYet.classList.toggle("hidden")
-  encryptedArea.classList.toggle("hidden")
+  notMessageYet.classList.add("hidden")
+  encryptedArea.classList.remove("hidden")
   return encryptedText.innerHTML=encryptedMessage
   }else{
   return encryptedText.innerHTML=encryptedMessage
@@ -47,6 +47,7 @@ function decryptOption(){
 
 //send an alert if the textValue is empty
 function emptyTextValue(phrase){
+  if(!notMessageYet.classList.contains("hidden"))
   notMessageYet.classList.remove("hidden")
   encryptedArea.classList.add("hidden")
  return alert(phrase)
@@ -54,15 +55,14 @@ function emptyTextValue(phrase){
 
 //Function to encrypt the text 
 function encrypt(encryptedString){
- let phrase= encryptedString.toLowerCase()
- let result = regex.test(phrase);
+ let result = regex.test(encryptedString);
  if(result){
   for (let index = 0; index < codeKeys.length; index++) {
-  if (phrase.includes(codeKeys[index][0])) {
-   phrase= phrase.replaceAll(codeKeys[index][0],codeKeys[index][1])
+  if (encryptedString.includes(codeKeys[index][0])) {
+   encryptedString= encryptedString.replaceAll(codeKeys[index][0],codeKeys[index][1])
    }
   }
-  return phrase
+  return encryptedString
  }else{
   emptyTextValue("Value not allowed 🙀")
  }
@@ -70,16 +70,15 @@ function encrypt(encryptedString){
 
 //Function to decrypt the text 
 function decrypt(decryptedString){
- let phrase= decryptedString.toLowerCase()
- let result = regex.test(phrase);
+ let result = regex.test(decryptedString);
  if(result){
   for (let index = 0; index < codeKeys.length; index++) {
-   if (phrase.includes(codeKeys[index][1])) {
-    phrase= phrase.replaceAll(codeKeys[index][1],codeKeys[index][0])
+   if (decryptedString.includes(codeKeys[index][1])) {
+    decryptedString= decryptedString.replaceAll(codeKeys[index][1],codeKeys[index][0])
    }
   
   }
- return phrase
+ return decryptedString
  }else{
   emptyTextValue("Value not allowed 🙀")
  }
