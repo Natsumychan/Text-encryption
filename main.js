@@ -64,7 +64,7 @@ function encrypt(encryptedString){
   }
   return phrase
  }else{
-  emptyTextValue("Not value allowed 🙀")
+  emptyTextValue("Value not allowed 🙀")
  }
 }
 
@@ -81,6 +81,18 @@ function decrypt(decryptedString){
   }
  return phrase
  }else{
-  emptyTextValue("Not value allowed 🙀")
+  emptyTextValue("Value not allowed 🙀")
  }
+}
+
+function copyText(){
+ let text = encryptedText.value;
+
+  navigator.clipboard.writeText(text)
+    .then(() => {
+      alert("Text copied! 😉");
+    })
+    .catch((error) => {
+      console.error("Error al copiar el texto:", error);
+    });
 }
