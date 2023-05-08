@@ -13,7 +13,7 @@ encryptButton.addEventListener("click",encryptOption)
 decryptButton.addEventListener("click",decryptOption)
 copyButton.addEventListener("click",copyText)
 
-//pressing encript button active the next function
+//pressing encript button active this next function
 function encryptOption (){
  let catchedText= textArea.value
  if(catchedText){
@@ -23,6 +23,8 @@ function encryptOption (){
  }
 }
 
+
+//This function show the encrypted  or decrypted results
 function changeBoxResult(encryptedMessage){
  if(encryptedArea.classList.contains("hidden")){
   notMessageYet.classList.toggle("hidden")
@@ -33,7 +35,7 @@ function changeBoxResult(encryptedMessage){
   }
 }
 
-//pressing decrypt button active the next function
+//pressing decrypt button active this next function
 function decryptOption(){
  let catchedText= textArea.value
   if(catchedText){
@@ -81,6 +83,7 @@ function decrypt(decryptedString){
  }
 }
 
+//copying text results
 function copyText(){
  let text = encryptedText.value;
 
