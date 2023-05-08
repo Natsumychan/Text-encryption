@@ -5,7 +5,7 @@ This is a simple web application that allows users to encrypt and decrypt text u
 This project is built using HTML, CSS, and Vanilla JavaScript.
 
 ## How to use the app 👀
-1. Open the index.html file in a web browser. You can also check the page in this link 👉[https://natsumychan.github.io/Text-encryption/][PlGa] 
+1. Open the index.html file in a web browser. You can also check the page clicking right here 👉 [Encrypt time!](https://natsumychan.github.io/Text-encryption/)
 2. Enter the text you want to encrypt or decrypt into the input field.
 3. Choose whether you want to encrypt or decrypt the text using the buttons below the input field.
 4. Click the button to see the encrypted or decrypted text, in the result field (white box)
