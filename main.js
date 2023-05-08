@@ -17,8 +17,7 @@ copyButton.addEventListener("click",copyText)
 function encryptOption (){
  let catchedText= textArea.value
  if(catchedText){
-  const encryptedMessage= encrypt(catchedText)
-  changeBoxResult(encryptedMessage)
+  encrypt(catchedText)
  }else{
   emptyTextValue("Please insert the text! 😐")
  }
@@ -26,8 +25,8 @@ function encryptOption (){
 
 function changeBoxResult(encryptedMessage){
  if(encryptedArea.classList.contains("hidden")){
-  notMessageYet.classList.add("hidden")
-  encryptedArea.classList.remove("hidden")
+  notMessageYet.classList.toggle("hidden")
+  encryptedArea.classList.toggle("hidden")
   return encryptedText.innerHTML=encryptedMessage
   }else{
   return encryptedText.innerHTML=encryptedMessage
@@ -38,16 +37,14 @@ function changeBoxResult(encryptedMessage){
 function decryptOption(){
  let catchedText= textArea.value
   if(catchedText){
-   const decryptedMessage= decrypt(catchedText)
-   changeBoxResult(decryptedMessage)
-  }else{
+   decrypt(catchedText)
+   }else{
    emptyTextValue("Please insert the text! 😐")
  }
 }
 
 //send an alert if the textValue is empty
 function emptyTextValue(phrase){
-  if(!notMessageYet.classList.contains("hidden"))
   notMessageYet.classList.remove("hidden")
   encryptedArea.classList.add("hidden")
  return alert(phrase)
@@ -62,7 +59,7 @@ function encrypt(encryptedString){
    encryptedString= encryptedString.replaceAll(codeKeys[index][0],codeKeys[index][1])
    }
   }
-  return encryptedString
+  return changeBoxResult(encryptedString)
  }else{
   emptyTextValue("Value not allowed 🙀")
  }
@@ -78,7 +75,7 @@ function decrypt(decryptedString){
    }
   
   }
- return decryptedString
+ return  changeBoxResult(decryptedString)
  }else{
   emptyTextValue("Value not allowed 🙀")
  }
