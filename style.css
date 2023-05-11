@@ -184,6 +184,12 @@ p{
  color:#495057;
 }
 
+.buttons-container-encrypted-area{
+
+  display:flex;
+  flex-direction:column;
+}
+
 button{
  padding:24px;
  width:279px;
@@ -192,8 +198,47 @@ button{
  border-radius: 24px;
  font-size: 1.6rem;
  line-height: 19px;
- color:#0A3871;
- background-color: white;
+
+}
+
+#copy-button{
+  margin-bottom: 20px;
+  color: #0A3871;
+  background-color: white;
+  transition: background-color 200ms ease-in-out;
+}
+
+#copy-button:active{
+  background-color: rgb(167, 164, 164);
+}
+
+#refresh-button{
+  color: white;
+  background-color: #0A3871;
+  transition: background-color 200ms ease-in-out;
+}
+
+#refresh-button:active{
+  background-color: #427dc5;
+}
+
+footer{
+  width: 80%;
+  margin: 0 auto;
+}
+
+footer p,a{
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+a{
+  /* font-size: 1.6rem; */
+  text-decoration: none;
+}
+
+a:hover{
+  color:#0A3871
 }
 
 .hidden{
@@ -233,7 +278,7 @@ button{
    font-size: 1.6rem;
   }
 
-  .writing-area, input, button :hover {
+    .encrypted-area-bttn, textarea, input :hover {
    cursor: pointer;
   }
 
@@ -304,6 +349,12 @@ button{
 
  .first-dialog-box{
   justify-content: center;
+ }
+
+ footer{
+  position:absolute;
+  bottom: 0;
+  left:0;
  }
  
 }

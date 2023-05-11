@@ -5,6 +5,7 @@ const decryptButton= document.querySelector(".decrypt-button")
 const notMessageYet= document.querySelector(".first-dialog-box")
 const encryptedArea= document.querySelector("#encrypted-area")
 const copyButton= document.querySelector("#copy-button")
+const reload = document.querySelector('#refresh-button');
 let codeKeys=[["e","enter"],["i","imes"],["a","ai"],["o","ober"],["u","ufat"]]
 let regex = /^[a-z\s]*$/;
 
@@ -95,3 +96,7 @@ function copyText(){
       console.error("Error al copiar el texto:", error);
     });
 }
+
+
+//refresh button function
+reload.addEventListener('click', _ => location.reload());
