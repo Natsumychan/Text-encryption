@@ -18,8 +18,9 @@ html{
 body{
  background-image: url(./src/4882066.jpg);
  background-size: cover;
+ background-repeat: no-repeat;
+ background-attachment: fixed;
 }
-
 
 main{
  margin: 24px auto;
@@ -98,6 +99,7 @@ input{
 
 .encrypt-button:hover{
   background-color: #164f94;
+  cursor: pointer;
 }
 
 .decrypt-button{
@@ -107,6 +109,7 @@ input{
 
 .decrypt-button:hover {
   background-color: rgb(189, 187, 187);
+  cursor: pointer;
 }
 
 .writing-area{
@@ -233,7 +236,6 @@ footer p,a{
 }
 
 a{
-  /* font-size: 1.6rem; */
   text-decoration: none;
 }
 
@@ -278,7 +280,7 @@ a:hover{
    font-size: 1.6rem;
   }
 
-    .encrypted-area-bttn, textarea, input :hover {
+    .encrypted-area-bttn, input :hover {
    cursor: pointer;
   }
 
